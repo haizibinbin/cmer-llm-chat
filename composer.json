@@ -1,0 +1,17 @@
+{
+    "name": "hbb/cmer-llm-chat",
+    "require": {
+        "guzzlehttp/guzzle": "^7.8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hbb\\CmerLlmChat\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "hbb",
+            "email": "haizibinbin@gmail.com"
+        }
+    ]
+}
