@@ -1,5 +1,7 @@
 {
     "name": "hbb/cmer-llm-chat",
+    "description": "Cmer Group Llm Chat PHP SDK",
+    "license": "MIT",
     "require": {
         "guzzlehttp/guzzle": "^7.8"
     },
