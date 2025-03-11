@@ -13,7 +13,7 @@ class BaseModel
         $vars = get_object_vars($this);
         return array_filter($vars, function($value) {
             // 如果 $value 是空数组，或空字符串，则过滤掉
-            if (is_array($value) && empty($value) || is_string($value) && empty($value)) {
+            if ((is_array($value) || is_string($value)) && empty($value)) {
                 return false;
             }
             return $value;
