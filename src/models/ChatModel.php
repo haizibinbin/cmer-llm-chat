@@ -39,20 +39,20 @@ class ChatModel extends BaseModel
      * 较高的值（如 0.8）将使输出更加随机，而较低的值（如 0.2）将使其更加集中和确定性。
      * 我们通常建议更改此值或 top_p，但不要同时更改两者。
      */
-    public int $temperature=0;
+    public int $temperature;
 
     /**
      * @var int $max_tokens
      * 限制回复的最大token数
      * 默认不限制
      */
-    public int $max_tokens=0;
+    public int $max_tokens;
 
     /**
      * @var array $stop
      * openai 并行调用函数
      */
-    public array $tools=[];
+    public array $tools;
 
     /**
      * @var string $tool_choice
@@ -60,14 +60,14 @@ class ChatModel extends BaseModel
      * 不传值，或空，默认为auto：模型会自己选择调用哪些函数
      * 指定函数示例：{"type": "function", "function": {"name": "my_function"}}
      */
-    public string $tool_choice='';
+    public string $tool_choice;
 
     /**
      * @var float $frequency_penalty
      * -2.0 和 2.0 之间的数字。正值根据迄今为止文本中的现有频率对新标记进行惩罚，从而降低模型逐字重复同一行的可能性.
      * 默认为0
      */
-    public float $frequency_penalty=0;
+    public float $frequency_penalty;
 
     /**
      * @var string $response_format
@@ -78,7 +78,7 @@ class ChatModel extends BaseModel
      * 如果不这样做，模型可能会生成无休止的空白流，直到生成达到令牌限制，从而导致请求长时间运行且看似“卡住”。
      * 另请注意，如果 finish_reason="length"，则消息内容可能会被部分截断，这表示生成超过了 max_tokens 或对话超过了最大上下文长度。
      */
-    public string $response_format='';
+    public string $response_format;
 
     /**
      * @var bool $security_check
